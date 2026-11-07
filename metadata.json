@@ -1,0 +1,6 @@
+{
+  "name": "Zenith Anti-Hack",
+  "description": "An advanced AI companion powered by Gemini, designed for cybersecurity logic tutoring, secure program design, and custom API verification.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API", "AI Conversation", "Smart Assistance", "Custom API Support"]
+}

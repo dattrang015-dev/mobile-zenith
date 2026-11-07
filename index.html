@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zenith ai vn - Trợ lý ai siêu việt</title>
+    <meta name="description" content="Zenith AI VN - Trợ lý AI siêu việt, đồng hành thông minh cùng bạn trong công việc, học tập, sáng tạo và giải quyết mọi bài toán phức tạp." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Zenith ai vn - Trợ lý ai siêu việt" />
+    <meta property="og:description" content="Zenith AI VN - Trợ lý AI siêu việt, đồng hành thông minh cùng bạn trong công việc, học tập, sáng tạo và giải quyết mọi bài toán phức tạp." />
+    <meta property="og:site_name" content="Zenith AI VN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Zenith ai vn - Trợ lý ai siêu việt" />
+    <meta name="twitter:description" content="Zenith AI VN - Trợ lý AI siêu việt, đồng hành thông minh cùng bạn trong công việc, học tập, sáng tạo và giải quyết mọi bài toán phức tạp." />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://zenith-ai-mu.vercel.app/" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Zenith AI VN",
+      "alternateName": "Zenith ai vn - Trợ lý ai siêu việt",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "All",
+      "description": "Zenith AI VN - Trợ lý AI siêu việt, đồng hành thông minh cùng bạn trong công việc, học tập, sáng tạo và giải quyết mọi bài toán phức tạp."
+    }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='z' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2334d399'/%3E%3Cstop offset='100%25' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3ClinearGradient id='r' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%2394a3b8' stop-opacity='0.5'/%3E%3Cstop offset='100%25' stop-color='%23ffffff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cellipse cx='50' cy='50' rx='44' ry='15' fill='none' stroke='url(%23r)' stroke-width='6' transform='rotate(-28 50 50)'/%3E%3Cpath d='M33,31 L67,31 L37,69 L67,69' fill='none' stroke='url(%23z)' stroke-width='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M36,31 L64,31 M39,67 L64,67' fill='none' stroke='%23ffffff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <script>
+      // Fix for browser extensions attempting to assign window.fetch when it has only a getter
+      (function() {
+        try {
+          var nativeFetch = window.fetch;
+          var activeFetch = typeof nativeFetch === 'function' ? nativeFetch.bind(window) : nativeFetch;
+          
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return activeFetch;
+            },
+            set: function(val) {
+              activeFetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (err) {
+          // Fallback if defineProperty cannot be set
+        }
+
+        // Global protection against third-party browser extension injection errors
+        window.addEventListener('error', function(event) {
+          if (
+            (event.filename && event.filename.indexOf('chrome-extension://') !== -1) ||
+            (event.message && (
+              event.message.indexOf('Cannot set property fetch of #<Window>') !== -1 ||
+              event.message.indexOf('fetch of #<Window> which has only a getter') !== -1
+            ))
+          ) {
+            event.stopImmediatePropagation && event.stopImmediatePropagation();
+            event.preventDefault && event.preventDefault();
+            return true;
+          }
+        }, true);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

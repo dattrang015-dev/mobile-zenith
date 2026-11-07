@@ -1,0 +1,62 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Stores user basic information, preferences, and permissions",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "name": { "type": "string" },
+        "picture": { "type": "string" },
+        "role": { "type": "string", "enum": ["admin", "user", "pro"] },
+        "isBanned": { "type": "boolean" },
+        "adminPasswordHash": { "type": "string", "description": "Hashed personal admin password" },
+        "needsAdminPasswordSetup": { "type": "boolean", "description": "Flag indicating if admin must set personal password" },
+        "adminPasswordUpdatedAt": { "type": "number", "description": "Timestamp of admin password update" },
+        "updatedAt": { "type": "number" }
+      },
+      "required": ["email", "name", "updatedAt"]
+    },
+    "ChatSession": {
+      "title": "Chat Session",
+      "description": "Stores a single chat conversation thread",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "userId": { "type": "string" },
+        "updatedAt": { "type": "number" },
+        "messages": {
+          "type": "array",
+          "items": { "type": "object" }
+        }
+      },
+      "required": ["title", "userId", "updatedAt", "messages"]
+    },
+    "SiteSettings": {
+      "title": "Site Settings",
+      "description": "Global configuration for the website appearance and behavior",
+      "type": "object",
+      "properties": {
+        "siteName": { "type": "string" },
+        "tagline": { "type": "string" },
+        "themeColor": { "type": "string" },
+        "fontFamily": { "type": "string" },
+        "announcement": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User account data and permissions"
+    },
+    "/sessions/{sessionId}": {
+      "schema": "ChatSession",
+      "description": "Chat log data"
+    },
+    "/settings/global": {
+      "schema": "SiteSettings",
+      "description": "Site-wide configuration"
+    }
+  }
+}
